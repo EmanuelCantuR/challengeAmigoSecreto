@@ -21,7 +21,22 @@ function listarAmigos() {
     amigos.forEach((amigo) => {
         const li = document.createElement('li'); // Crea un nuevo elemento <li>
         li.textContent = amigo; // Asigna el nombre del amigo al <li>
-        ul.appendChild(li); // Agrega el <li> a la lista desordenada (ul)
+        ul.appendChild(li); // Agrega el <li> a la lista (ul)
     });
 }
 
+const sortearAmigo = () => {
+    amigos.length !== 0 ? elegirAmigo() : alert("Primero ingresa al menos el nombre de un amigo");  //Validación para que el arreglo no este vacio
+}
+
+function elegirAmigo(){
+    let numeroAmigos = amigos.length;  //Obtener el numero de amigos
+    console.log(`El número de amigos agregados es ${numeroAmigos}`);
+
+    let indiceAleatorio = Math.floor(Math.random()*numeroAmigos); //obtener un indice aleatorio para elegir el amigo
+    console.log(`El indice aleatorio es ${indiceAleatorio}`);
+    const ul = document.querySelector('#resultado'); //Seleccionar elemento donde se agregara el amigo elegido
+    const li = document.createElement('li');  //Crea un nuevo elemento <li>
+    li.textContent = amigos[indiceAleatorio-1];  //Asigna el amigo que se encuentre en el indice dado
+    ul.appendChild(li); //agrega el <li> a la lista (ul)
+}
