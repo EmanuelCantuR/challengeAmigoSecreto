@@ -11,13 +11,11 @@ const procesarNuevoAmigo = (amigo) => {
     amigos.push(amigo); // Agrega el amigo a la lista
     document.getElementById('amigo').value = ''; // Limpia el input
     listarAmigos(); // Actualiza la lista desordenada en el HTML
-
 };
 
 function listarAmigos() {
     const ul = document.querySelector('#listaAmigos'); // Selecciona la lista
     ul.innerHTML = ''; // Limpia el contenido actual de la lista
-
     amigos.forEach((amigo) => {
         const li = document.createElement('li'); // Crea un nuevo elemento <li>
         li.textContent = amigo; // Asigna el nombre del amigo al <li>
