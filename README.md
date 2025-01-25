@@ -1,4 +1,6 @@
-<img src="assets/logo-alura.webp" alt="Logo de Alura latam" align="center">
+<p align="center">
+<img src="assets/logo-alura.webp" alt="Logo de Alura latam">
+</p>
 
 # Challenge Amigo secreto
 
